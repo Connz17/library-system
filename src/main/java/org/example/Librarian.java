@@ -1,9 +1,13 @@
 package org.example;
 
 public class Librarian extends Person{
-    public Librarian(int id, String name) {
-        super(id, name);
 
+    private LibraryDatabase libraryDatabase;
+
+
+    public Librarian(String name, LibraryDatabase libraryDatabase) {
+        super(name);
+        this.libraryDatabase = libraryDatabase;
     }
 
     @Override

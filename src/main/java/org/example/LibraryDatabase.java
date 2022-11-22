@@ -35,7 +35,7 @@ public class LibraryDatabase {
 
     public Book getBookByTitle(String title){
         for (Book book: listOfBooks ) {
-            if (book.getTitle().contains(title)){
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())){
                 return book;
             }
         }
@@ -54,7 +54,7 @@ public class LibraryDatabase {
 
     public void searchBooksByTitle(String title){
         for (Book book: listOfBooks ) {
-            if (book.getTitle().contains(title)){
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())){
                 System.out.println(book);
 
             }
@@ -63,7 +63,7 @@ public class LibraryDatabase {
 
     public void searchBooksByGenre(String genre){
         for (Book book: listOfBooks ) {
-            if (book.getGenre().contains(genre)){
+            if (book.getGenre().toLowerCase().contains(genre.toLowerCase())){
                 System.out.println(book);
 
             }
@@ -72,7 +72,7 @@ public class LibraryDatabase {
 
     public void searchBooksByAuthor(String author){
         for (Book book: listOfBooks ) {
-            if (book.getAuthor().contains(author)){
+            if (book.getAuthor().toLowerCase().contains(author.toLowerCase())){
                 System.out.println(book);
 
             }
@@ -81,7 +81,7 @@ public class LibraryDatabase {
 
     public void searchBooksByPublisher(String publisher){
         for (Book book: listOfBooks ) {
-            if (book.getPublisher().contains(publisher)){
+            if (book.getPublisher().toLowerCase().contains(publisher.toLowerCase())){
                 System.out.println(book);
 
             }

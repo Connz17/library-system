@@ -5,13 +5,20 @@ public class User extends Person{
     private Account account;
 
 
-    public User(int id, String name, Account account) {
-        super(id, name);
+    public User(String name, Account account) {
+        super(name);
         this.account = account;
     }
 
+    public Account getAccount() {
+        return account;
+    }
 
-     public void loanBook(LibraryDatabase libraryDatabase, Account account, String title){
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public void loanBook(LibraryDatabase libraryDatabase, Account account, String title){
          account.addBook(libraryDatabase.getBookByTitle(title));
          libraryDatabase.deleteBook(libraryDatabase.getBookByTitle(title));
      }
@@ -26,9 +33,6 @@ public class User extends Person{
         account.displayAccount();
     }
 
-    @Override
-    public String toString() {
-        return "User{}";
-    }
+
 
 }
