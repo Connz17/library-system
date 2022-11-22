@@ -33,9 +33,18 @@ public class LibraryDatabase {
         }
     }
 
-    public Book getBookByTitle(String string){
+    public Book getBookByTitle(String title){
         for (Book book: listOfBooks ) {
-            if (book.getTitle().contains(string)){
+            if (book.getTitle().contains(title)){
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public Book getBookById(int id){
+        for (Book book: listOfBooks ) {
+            if (book.getId() == id){
                 System.out.println(book);
                 return book;
             }
@@ -43,15 +52,43 @@ public class LibraryDatabase {
         return null;
     }
 
-//    search books by title
-//
-//    search by genre
-//
-//    search by auther
-//
-//    search books by publisher
-//
-//    get book by id
+    public void searchBooksByTitle(String title){
+        for (Book book: listOfBooks ) {
+            if (book.getTitle().contains(title)){
+                System.out.println(book);
+
+            }
+        }
+    }
+
+    public void searchBooksByGenre(String genre){
+        for (Book book: listOfBooks ) {
+            if (book.getGenre().contains(genre)){
+                System.out.println(book);
+
+            }
+        }
+    }
+
+    public void searchBooksByAuthor(String author){
+        for (Book book: listOfBooks ) {
+            if (book.getAuthor().contains(author)){
+                System.out.println(book);
+
+            }
+        }
+    }
+
+    public void searchBooksByPublisher(String publisher){
+        for (Book book: listOfBooks ) {
+            if (book.getPublisher().contains(publisher)){
+                System.out.println(book);
+
+            }
+        }
+    }
+
+
 
 
 

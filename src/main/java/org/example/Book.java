@@ -73,10 +73,10 @@ public class Book {
     @Override
     public String toString() {
         return "Book " + id + "\n" +
-                "Title " + title +
-                " by " + author +
-                ". Genre " + genre +
-                "and subGenre " + subGenre +
+                "Title - " + title +
+                ". \nBy " + author +
+                ". Genre: " + genre +
+                ", and subGenre: " + subGenre +
                 ". Published by " + publisher + "\n";
     }
 }

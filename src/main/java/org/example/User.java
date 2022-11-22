@@ -10,12 +10,25 @@ public class User extends Person{
         this.account = account;
     }
 
+
+     public void loanBook(LibraryDatabase libraryDatabase, Account account, String title){
+         account.addBook(libraryDatabase.getBookByTitle(title));
+         libraryDatabase.deleteBook(libraryDatabase.getBookByTitle(title));
+     }
+
+    public void returnBook(LibraryDatabase libraryDatabase, Account account, String title){
+        libraryDatabase.addBook(account.getBookByTitle(title));
+        account.deleteBook(account.getBookByTitle(title));
+
+    }
+
+    public void checkAccount(Account account){
+        account.displayAccount();
+    }
+
     @Override
     public String toString() {
         return "User{}";
     }
 
-// public void loanBook(LibraryDatabase libraryDatabase, Account account){
-//     libraryDatabase.getListOfBooks().
-// }
 }
