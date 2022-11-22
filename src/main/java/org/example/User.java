@@ -1,8 +1,13 @@
 package org.example;
 
 public class User extends Person{
-    public User(int id, String name) {
+
+    private Account account;
+
+
+    public User(int id, String name, Account account) {
         super(id, name);
+        this.account = account;
     }
 
     @Override
@@ -10,7 +15,7 @@ public class User extends Person{
         return "User{}";
     }
 
- public void loanBook(){
-
- }
+// public void loanBook(LibraryDatabase libraryDatabase, Account account){
+//     libraryDatabase.getListOfBooks().
+// }
 }

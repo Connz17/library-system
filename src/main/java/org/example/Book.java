@@ -69,4 +69,14 @@ public class Book {
     public void setSubGenre(String subGenre) {
         this.subGenre = subGenre;
     }
+
+    @Override
+    public String toString() {
+        return "Book " + id + "\n" +
+                "Title " + title +
+                " by " + author +
+                ". Genre " + genre +
+                "and subGenre " + subGenre +
+                ". Published by " + publisher + "\n";
+    }
 }

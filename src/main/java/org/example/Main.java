@@ -8,12 +8,15 @@ public class Main {
 
 
     public static void main(String[] args) {
-        LibraryDatabase database = new LibraryDatabase();
-        System.out.println(database.getListOfBooks());
+        LibraryDatabase library = new LibraryDatabase();
 
-        LibraryInitialiser ini = new LibraryInitialiser(database);
+        LibraryInitialiser init = new LibraryInitialiser(library);
 
-        ini.LibraryInit();
-        System.out.println(database.getListOfBooks().toString());
+        init.Initialise();
+        //System.out.println(library.getListOfBooks());
+        //System.out.println(library.getListOfBooks());
+        //library.displayBooks();
+        library.getBookByTitle("Data");
+
     }
 }
