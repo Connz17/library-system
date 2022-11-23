@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class LibrarySystem {
 
     Scanner console = new Scanner(System.in);
-    User user = new User("", new Account());
+
+    Account userAccount = new Account();
+    User user = new User("", userAccount);
 
 
     public void addUser(){
@@ -20,7 +22,7 @@ public class LibrarySystem {
     }
 
     public void selectLibraryFunction(){
-        System.out.println(user.getName() + " Please choose a function you want to execute by entering the corresponding number: \n1- Display available books. \n2- Search for books by Title. \n3- Search for books by Genre. \n4- Search for books by Author. \n5- Search for books by Publisher. \n6- Loan Book. \n7- Return Book. \n8- Check account.");
+        System.out.println(user.getName() + " Please choose a function you want to execute by entering the corresponding number: \n1- Display available books. \n2- Search for books by Title. \n3- Search for books by Genre. \n4- Search for books by Author. \n5- Search for books by Publisher. \n6- Search for books by Number. \n7- Loan Book. \n8- Return Book. \n9- Check account.");
 
     }
 

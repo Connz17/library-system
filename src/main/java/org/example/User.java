@@ -20,11 +20,13 @@ public class User extends Person{
 
     public void loanBook(LibraryDatabase libraryDatabase, Account account, String title){
          account.addBook(libraryDatabase.getBookByTitle(title));
+         System.out.println("Loaning: \n" + libraryDatabase.getBookByTitle(title));
          libraryDatabase.deleteBook(libraryDatabase.getBookByTitle(title));
      }
 
     public void returnBook(LibraryDatabase libraryDatabase, Account account, String title){
         libraryDatabase.addBook(account.getBookByTitle(title));
+        System.out.println("Returning: \n" + account.getBookByTitle(title));
         account.deleteBook(account.getBookByTitle(title));
 
     }
